@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bed6gnlgf4ji5"]
+
+[ext_resource type="Script" uid="uid://dg8ndxvb5o8kh" path="res://Scenes/Threadmill/threadmill.gd" id="1_y3qbn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71ttx"]
+
+[node name="Threadmill" type="Area2D" unique_id=1337107068]
+script = ExtResource("1_y3qbn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1983800333]
+shape = SubResource("RectangleShape2D_71ttx")
+debug_color = Color(0.7199092, 0.47256964, 0.24185067, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

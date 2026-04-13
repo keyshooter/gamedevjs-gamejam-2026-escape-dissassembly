@@ -1,0 +1,35 @@
+[gd_scene format=4 uid="uid://cog7hl4jhfyv5"]
+
+[ext_resource type="TileSet" uid="uid://boh0h1wniongp" path="res://Tilemap/tileset.tres" id="1_4dpyx"]
+[ext_resource type="PackedScene" uid="uid://ccfxwy8ivulb4" path="res://Scenes/Player/player.tscn" id="2_3mqfk"]
+[ext_resource type="PackedScene" uid="uid://c0gpc2vrxdyiq" path="res://Scenes/DeadZone/dead_zone.tscn" id="3_3mqfk"]
+[ext_resource type="PackedScene" uid="uid://jhcp7oheog57" path="res://Scenes/HurtZone/hurt_zone.tscn" id="4_iixi8"]
+[ext_resource type="PackedScene" uid="uid://bed6gnlgf4ji5" path="res://Scenes/Threadmill/threadmill.tscn" id="5_cyadu"]
+
+[node name="Main" type="Node2D" unique_id=2090202438]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=783491068]
+tile_map_data = PackedByteArray("AAAJAAAAAgAAAAAAAAAKAAAAAgAAAAAAAAALAAAAAgAAAAAAAAAOAAAAAgAAAAAAAAD8/wAAAgAAAAAAAAD9/wAAAgAAAAAAAAD+/wAAAgAAAAAAAAD//wAAAgAAAAAAAAAAAAAAAgAAAAMAAAABAAAAAgAAAAMAAAACAAAAAgAAAAMAAAAGAAAAAgAAAAQAAAAHAAAAAgAAAAQAAAAIAAAAAgAAAAQAAAAJAP//AgAIAAMAAAAKAP//AgAIAAMAAAALAP//AgAIAAMAAAAMAAAAAgAAAAAAAAANAAAAAgAAAAAAAAAPAAAAAgAAAAAAAAADAAAAAgANAAEAAQAEAAAAAgANAAEAAQAFAAAAAgANAAEAAQA=")
+tile_set = ExtResource("1_4dpyx")
+
+[node name="Player" parent="." unique_id=1071533100 instance=ExtResource("2_3mqfk")]
+position = Vector2(-36, 0)
+
+[node name="DeadZone" parent="." unique_id=137864004 instance=ExtResource("3_3mqfk")]
+position = Vector2(81, 11)
+scale = Vector2(2.7199974, 0.72000027)
+
+[node name="HurtZone" parent="." unique_id=174177338 instance=ExtResource("4_iixi8")]
+position = Vector2(189, -4.0000005)
+scale = Vector2(2.2724445, 0.39720508)
+
+[node name="Threadmills" type="Node2D" parent="." unique_id=1645162208]
+
+[node name="Threadmill" parent="Threadmills" unique_id=1337107068 instance=ExtResource("5_cyadu")]
+position = Vector2(26.999996, -1)
+scale = Vector2(2.6495965, 0.15999955)
+
+[node name="Threadmill2" parent="Threadmills" unique_id=572637767 instance=ExtResource("5_cyadu")]
+position = Vector2(135, -1)
+scale = Vector2(2.6495965, 0.15999955)
+impulse = -5.0
