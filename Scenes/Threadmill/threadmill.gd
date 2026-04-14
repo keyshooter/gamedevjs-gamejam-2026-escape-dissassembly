@@ -1,3 +1,4 @@
+# represents a threadmill block, it will move whatever is mark as Pushable
 extends Area2D
 
 @export var impulse: float = 5.0

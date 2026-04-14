@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ugbr670h3lwr"]
+
+[ext_resource type="Texture2D" uid="uid://m6ix4qknhp5p" path="res://Scenes/DamageBlock/Images/tile_041.png" id="1_2anpo"]
+[ext_resource type="Script" uid="uid://cews3ayjwlfx2" path="res://Scenes/DamageBlock/damage_block.gd" id="1_grpvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grpvv"]
+
+[node name="DamageBlock" type="StaticBody2D" unique_id=242856815]
+script = ExtResource("1_grpvv")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=844642301]
+texture = ExtResource("1_2anpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1996124664]
+shape = SubResource("RectangleShape2D_grpvv")
