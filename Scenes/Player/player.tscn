@@ -137,7 +137,7 @@ _data = {
 &"move": SubResource("Animation_gu6f8")
 }
 
-[node name="Player" type="CharacterBody2D" unique_id=1071533100 groups=["Player", "Pushable"]]
+[node name="Player" type="CharacterBody2D" unique_id=1071533100 groups=["Player"]]
 script = ExtResource("1_4ntmi")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1694371663]

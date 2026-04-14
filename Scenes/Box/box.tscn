@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d4case2o10t3n"]
+
+[ext_resource type="Texture2D" uid="uid://c8ru6qw5mefbf" path="res://Scenes/Box/tile_268.png" id="1_2frdm"]
+[ext_resource type="Script" uid="uid://dvsp0igtt52au" path="res://Scenes/Box/box.gd" id="1_8rww4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rww4"]
+
+[node name="Box" type="RigidBody2D" unique_id=284027411]
+lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_8rww4")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=202128296]
+texture = ExtResource("1_2frdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1535408051]
+shape = SubResource("RectangleShape2D_8rww4")

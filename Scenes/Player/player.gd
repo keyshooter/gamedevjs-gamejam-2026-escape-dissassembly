@@ -15,6 +15,8 @@ var move_input: float = 0
 var player_hurt_state: bool = false
 var on_ground = true
 
+var threadmill_velocity: float = 0.0
+
 @onready var sprite: Sprite2D = $Sprite
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
@@ -36,6 +38,8 @@ func _physics_process(delta: float) -> void:
 	# Jump
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
+	
+	velocity.x += threadmill_velocity 
 	
 	move_and_slide()
 
