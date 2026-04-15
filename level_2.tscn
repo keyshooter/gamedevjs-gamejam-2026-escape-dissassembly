@@ -17,13 +17,11 @@ tile_set = ExtResource("1_0s5r2")
 position = Vector2(-30, 7)
 
 [node name="DeadZone" parent="." unique_id=137864004 instance=ExtResource("3_7dov7")]
-visible = false
-position = Vector2(81, 11)
+position = Vector2(73, -185.00003)
 scale = Vector2(2.7199974, 0.72000027)
 
 [node name="HurtZone" parent="." unique_id=174177338 instance=ExtResource("4_ehv2h")]
-visible = false
-position = Vector2(189, -4.0000005)
+position = Vector2(181, -200)
 scale = Vector2(2.2724445, 0.39720508)
 
 [node name="Threadmills" type="Node2D" parent="." unique_id=398457405]
