@@ -36,4 +36,4 @@ scale = Vector2(2.6495965, 0.15999955)
 impulse = -5.0
 
 [node name="PressurePlate" parent="." unique_id=1131907912 instance=ExtResource("6_3asqb")]
-position = Vector2(423, 120)
+position = Vector2(423, 131)

@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://csgv2x3lqosmy" path="res://Scenes/Player/Images/tile_023.png" id="8_jhyir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
-size = Vector2(10, 20)
+size = Vector2(16, 12.5)
 
 [sub_resource type="Animation" id="Animation_x3vf3"]
 length = 0.001
@@ -145,7 +145,7 @@ texture = ExtResource("1_l8h54")
 offset = Vector2(0, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=101586682]
-position = Vector2(0, -10)
+position = Vector2(0, -5.75)
 shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1730554783]
