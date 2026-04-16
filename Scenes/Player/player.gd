@@ -58,8 +58,8 @@ func _process(_delta: float) -> void:
 	if velocity.x != 0:
 		sprite.flip_h = velocity.x < 0
 		
-	if global_position.y > 200:
-		game_over()
+	#if global_position.y > 200:
+		#game_over()
 		
 	_manage_animation()
 
