@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://jhcp7oheog57" path="res://Scenes/HurtZone/hurt_zone.tscn" id="4_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://bed6gnlgf4ji5" path="res://Scenes/Threadmill/threadmill.tscn" id="5_15wb7"]
 [ext_resource type="PackedScene" uid="uid://d38yk4ie6irqv" path="res://Scenes/PressurePlate/pressure_plate.tscn" id="6_eoq84"]
+[ext_resource type="Script" uid="uid://bnopwkqod8bu7" path="res://Scenes/Levels/SceneTrigger.gd" id="7_fphuk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnnky"]
 
 [node name="Node2D" type="Node2D" unique_id=1967206018]
 
@@ -14,7 +17,7 @@ tile_map_data = PackedByteArray("AAACAAAAAgANAAYAAAADAAAAAgANAAYAAAAHAAAAAgANAAY
 tile_set = ExtResource("1_0s5r2")
 
 [node name="Player" parent="." unique_id=1071533100 instance=ExtResource("2_7j8ne")]
-position = Vector2(-30, 7)
+position = Vector2(-27, -49)
 
 [node name="DeadZone" parent="." unique_id=137864004 instance=ExtResource("3_7dov7")]
 position = Vector2(73, -185.00003)
@@ -38,3 +41,12 @@ impulse = -5.0
 [node name="PressurePlate" parent="." unique_id=1131907912 instance=ExtResource("6_eoq84")]
 visible = false
 position = Vector2(-63, -39)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1852801602 groups=["Player"]]
+position = Vector2(783, 145)
+script = ExtResource("7_fphuk")
+next_scene = "uid://c7c5mty7ecyig"
+trigger_group = "Player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2055006737]
+shape = SubResource("RectangleShape2D_pnnky")
