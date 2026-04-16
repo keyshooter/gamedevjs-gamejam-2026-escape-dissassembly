@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://jhcp7oheog57" path="res://Scenes/HurtZone/hurt_zone.tscn" id="4_doouk"]
 [ext_resource type="PackedScene" uid="uid://bed6gnlgf4ji5" path="res://Scenes/Threadmill/threadmill.tscn" id="5_0fyhm"]
 [ext_resource type="PackedScene" uid="uid://d38yk4ie6irqv" path="res://Scenes/PressurePlate/pressure_plate.tscn" id="6_evokg"]
+[ext_resource type="PackedScene" uid="uid://dhnyhomfevin2" path="res://Scenes/BoxSpawner/box_spawner.tscn" id="7_reooa"]
+[ext_resource type="PackedScene" uid="uid://bhxxfokncgm11" path="res://Scenes/BoxSpawner/Box/box.tscn" id="8_doouk"]
 
 [node name="Main" type="Node2D" unique_id=2090202438]
 
@@ -14,7 +16,7 @@ tile_map_data = PackedByteArray("AAD8/wAAAgAAAAAAAAD9/wAAAgAAAAAAAAD+/wAAAgAAAAA
 tile_set = ExtResource("1_2634h")
 
 [node name="Player" parent="." unique_id=1071533100 instance=ExtResource("2_wakwf")]
-position = Vector2(-53, 614)
+position = Vector2(-63, 372)
 
 [node name="DeadZone" parent="." unique_id=137864004 instance=ExtResource("3_reooa")]
 position = Vector2(81, 11)
@@ -46,3 +48,11 @@ position = Vector2(90, 412)
 
 [node name="PressurePlate4" parent="." unique_id=209485951 instance=ExtResource("6_evokg")]
 position = Vector2(171, 313)
+
+[node name="BoxSpawner" parent="." unique_id=603810891 node_paths=PackedStringArray("spawn_location") instance=ExtResource("7_reooa")]
+position = Vector2(-89, 273)
+spawn_location = NodePath("Marker2D")
+element_to_spawn = ExtResource("8_doouk")
+
+[node name="Marker2D" type="Marker2D" parent="BoxSpawner" unique_id=536843572]
+position = Vector2(0, 13)
