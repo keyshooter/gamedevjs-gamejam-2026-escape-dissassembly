@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bvm7pdy6axx7v"]
+
+[ext_resource type="Script" uid="uid://dbg3ru7c61xb6" path="res://Scenes/Magnet/MagnetFloor/magnet_floor.gd" id="1_kwq4r"]
+[ext_resource type="Texture2D" uid="uid://bhroufyffxwdo" path="res://Scenes/Magnet/MagnetFloor/tile_0062.png" id="2_3xrwp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vkk2d"]
+radius = 32.0
+
+[node name="MagnetFloor" type="Node2D" unique_id=1960442350]
+script = ExtResource("1_kwq4r")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1231795202]
+texture = ExtResource("2_3xrwp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=812730151]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1197077958]
+shape = SubResource("CircleShape2D_vkk2d")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
