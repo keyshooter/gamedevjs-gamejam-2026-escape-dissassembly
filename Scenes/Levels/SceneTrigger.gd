@@ -13,6 +13,6 @@ func _ready() -> void:
 func _on_body_entered(body: Node) -> void:
 	if trigger_group == "" or body.is_in_group(trigger_group):
 		if next_scene != "":
-			SceneTransition.change_scene(next_scene)
+			SceneTransition.change_scene.call_deferred(next_scene)
 		else:
 			push_warning("SceneTrigger: no next_scene set on " + name)

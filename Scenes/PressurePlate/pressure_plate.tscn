@@ -9,10 +9,10 @@
 size = Vector2(20, 21.458334)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3ebc"]
-size = Vector2(3, 42)
+size = Vector2(3, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lafw2"]
-size = Vector2(3, 42)
+size = Vector2(3, 34)
 
 [sub_resource type="Animation" id="Animation_e0yno"]
 length = 0.001

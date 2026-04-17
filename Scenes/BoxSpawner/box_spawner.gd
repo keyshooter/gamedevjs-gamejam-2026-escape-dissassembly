@@ -22,3 +22,14 @@ func _process(delta: float) -> void:
 		var element = element_to_spawn.instantiate()
 		element.position = spawn_location.position
 		add_child(element)
+		
+	if seconds_passed >= seconds_to_spawn:
+		seconds_passed = 0.0
+
+
+func _on_screen_check_screen_entered() -> void:
+	can_spawn = !!spawn_location and !!element_to_spawn
+
+
+func _on_screen_check_screen_exited() -> void:
+	can_spawn = false
