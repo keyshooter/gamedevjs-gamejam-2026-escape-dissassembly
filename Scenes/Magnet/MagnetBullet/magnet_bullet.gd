@@ -1,7 +1,7 @@
 extends Area2D
 
 var direction: Vector2 = Vector2.LEFT
-var speed: float = 300.0
+var speed: float = 150.0
 
 func _physics_process(delta: float) -> void:
 	position += transform.x * speed * delta * direction

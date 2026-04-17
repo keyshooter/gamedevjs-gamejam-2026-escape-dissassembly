@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bwv1nu2wjq45h" path="res://Scenes/Magnet/magnet.tscn" id="9_gsxik"]
 [ext_resource type="PackedScene" uid="uid://dvdmem5s4s30p" path="res://Scenes/Magnet/MagnetBullet/magnet_bullet.tscn" id="10_3asqb"]
 [ext_resource type="PackedScene" uid="uid://b5r6hib8of7wr" path="res://Scenes/Belt/belt.tscn" id="11_3asqb"]
+[ext_resource type="PackedScene" uid="uid://bvm7pdy6axx7v" path="res://Scenes/Magnet/MagnetFloor/MagnetFloor.tscn" id="12_slbhm"]
 
 [node name="Main" type="Node2D" unique_id=2090202438]
 
@@ -120,12 +121,12 @@ bullet_scene = ExtResource("10_3asqb")
 [node name="Belt" parent="Belts" unique_id=2072402193 instance=ExtResource("11_3asqb")]
 position = Vector2(873, 297)
 scale = Vector2(2.4971735, 1.2536643)
-speed = -200
+speed = -150
 
 [node name="Belt4" parent="Belts" unique_id=2140768607 instance=ExtResource("11_3asqb")]
 position = Vector2(783.00006, 297)
 scale = Vector2(2.6399999, 1.2799903)
-speed = 200
+speed = 150
 
 [node name="Belt3" parent="Belts" unique_id=1365047569 instance=ExtResource("11_3asqb")]
 position = Vector2(801, 117)
@@ -135,7 +136,7 @@ speed = -100
 [node name="BoxSpawners" type="Node2D" parent="." unique_id=277806578]
 
 [node name="BoxSpawner" parent="BoxSpawners" unique_id=603810891 node_paths=PackedStringArray("spawn_location") instance=ExtResource("7_h0uxt")]
-position = Vector2(557, 60)
+position = Vector2(558, 64)
 spawn_location = NodePath("Marker2D")
 element_to_spawn = ExtResource("8_keyqw")
 
@@ -158,4 +159,10 @@ element_to_spawn = ExtResource("8_keyqw")
 [node name="Marker2D" type="Marker2D" parent="BoxSpawners/BoxSpawner4" unique_id=25948387]
 
 [node name="Player" parent="." unique_id=1071533100 instance=ExtResource("2_i4hbv")]
-position = Vector2(-29, -17)
+position = Vector2(-19, -25)
+
+[node name="MagnetFloor" parent="." unique_id=1960442350 instance=ExtResource("12_slbhm")]
+position = Vector2(478, 26)
+
+[node name="MagnetFloor2" parent="." unique_id=964313640 instance=ExtResource("12_slbhm")]
+position = Vector2(856, 226)
