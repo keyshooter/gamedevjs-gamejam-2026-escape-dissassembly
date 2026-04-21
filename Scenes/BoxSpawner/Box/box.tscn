@@ -2,10 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://b784rqq5jprr0" path="res://Scenes/BoxSpawner/Box/tile_0026.png" id="1_526ew"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_if54f"]
+friction = 0.1
+bounce = 0.2
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16aus"]
 size = Vector2(18, 18)
 
 [node name="Box" type="RigidBody2D" unique_id=1501591403]
+mass = 0.7
+physics_material_override = SubResource("PhysicsMaterial_if54f")
+lock_rotation = true
 
 [node name="Tile0026" type="Sprite2D" parent="." unique_id=1076536423]
 texture = ExtResource("1_526ew")
