@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bhxxfokncgm11"]
 
+[ext_resource type="Script" uid="uid://hnp4b8x78xyv" path="res://Scenes/BoxSpawner/Box/box.gd" id="1_7ddhe"]
 [ext_resource type="Texture2D" uid="uid://b784rqq5jprr0" path="res://Scenes/BoxSpawner/Box/tile_0026.png" id="1_526ew"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_if54f"]
@@ -9,13 +10,18 @@ bounce = 0.2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16aus"]
 size = Vector2(18, 18)
 
-[node name="Box" type="RigidBody2D" unique_id=1501591403]
+[node name="Box" type="RigidBody2D" unique_id=1501591403 groups=["Box"]]]
 mass = 0.7
 physics_material_override = SubResource("PhysicsMaterial_if54f")
 lock_rotation = true
+script = ExtResource("1_7ddhe")
 
-[node name="Tile0026" type="Sprite2D" parent="." unique_id=1076536423]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1076536423]
 texture = ExtResource("1_526ew")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=597163701]
 shape = SubResource("RectangleShape2D_16aus")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=147160060]
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

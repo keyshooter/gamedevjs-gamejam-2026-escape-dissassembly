@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bwv1nu2wjq45h"]
+
+[ext_resource type="Script" uid="uid://2lmy7bkgjnxa" path="res://Scenes/Magnet/magnet.gd" id="1_fmm81"]
+[ext_resource type="Texture2D" uid="uid://wv07yvsp6irv" path="res://Scenes/Magnet/tile_0064.png" id="2_ixvoe"]
+
+[node name="Magnet" type="Node2D" unique_id=99533466]
+script = ExtResource("1_fmm81")
+bullet_timer = 1.0
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=684127548]
+position = Vector2(0, -2)
+rotation = -1.5707964
+texture = ExtResource("2_ixvoe")
+
+[node name="Timer" type="Timer" parent="." unique_id=556633094]
+
+[node name="ScreenCheck" type="VisibleOnScreenEnabler2D" parent="." unique_id=948238661]
+
+[connection signal="screen_entered" from="ScreenCheck" to="." method="_on_screen_check_screen_entered"]
+[connection signal="screen_exited" from="ScreenCheck" to="." method="_on_screen_check_screen_exited"]

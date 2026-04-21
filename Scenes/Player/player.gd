@@ -10,6 +10,11 @@ extends CharacterBody2D
 var move_input: float = 0
 var player_hurt_state: bool = false
 var on_ground = true
+
+var is_confused: bool = false
+var confusion_timer: float = 0.0
+const MAX_CONFUSION_TIME: float = 3.0
+
 @onready var sprite: Sprite2D = $Sprite
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
@@ -53,14 +58,18 @@ func _damage_flash():
 	player_hurt_state = false
 	sprite.modulate = Color.WHITE
 
-
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if velocity.x != 0:
 		sprite.flip_h = velocity.x < 0
-
-	#if global_position.y > 200:
-		#game_over()
-
+		
+	if is_confused:
+		confusion_timer += delta
+		sprite.modulate = Color.YELLOW
+		if confusion_timer > MAX_CONFUSION_TIME:
+			is_confused = false
+			sprite.modulate = Color.WHITE
+			confusion_timer = 0.0
+	
 	_manage_animation()
 
 
@@ -87,3 +96,8 @@ func _manage_animation() -> void:
 			anim_player.play("move")
 		else:
 			anim_player.play("idle")
+
+
+func confuse_player() -> void:
+	is_confused = true
+	confusion_timer = 0.0

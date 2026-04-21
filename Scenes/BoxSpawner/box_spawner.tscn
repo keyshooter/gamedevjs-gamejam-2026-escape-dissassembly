@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://dhnyhomfevin2"]
 
 [ext_resource type="Script" uid="uid://f501jhfu37gx" path="res://Scenes/BoxSpawner/box_spawner.gd" id="1_fagrj"]
+[ext_resource type="Texture2D" uid="uid://benbgmuhtiymo" path="res://Scenes/BoxSpawner/tile_0107.png" id="2_dw6oe"]
 
 [node name="BoxSpawner" type="Node2D" unique_id=603810891]
 script = ExtResource("1_fagrj")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1923783539]
+texture = ExtResource("2_dw6oe")
+
+[node name="ScreenCheck" type="VisibleOnScreenEnabler2D" parent="." unique_id=1573062529]
+
+[connection signal="screen_entered" from="ScreenCheck" to="." method="_on_screen_check_screen_entered"]
+[connection signal="screen_exited" from="ScreenCheck" to="." method="_on_screen_check_screen_exited"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b5r6hib8of7wr"]
+
+[ext_resource type="Script" uid="uid://027ga5ruklbl" path="res://Scenes/Belt/belt.gd" id="1_vllkj"]
+[ext_resource type="Texture2D" uid="uid://b768ybqnrsjxs" path="res://Scenes/Belt/tile_0101.png" id="2_u37ql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wr1v6"]
+size = Vector2(20, 16)
+
+[node name="Belt" type="StaticBody2D" unique_id=2072402193]
+script = ExtResource("1_vllkj")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1657955748]
+visible = false
+texture = ExtResource("2_u37ql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623271609]
+shape = SubResource("RectangleShape2D_wr1v6")
