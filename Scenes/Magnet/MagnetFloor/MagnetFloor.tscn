@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvm7pdy6axx7v"]
 
 [ext_resource type="Script" uid="uid://dbg3ru7c61xb6" path="res://Scenes/Magnet/MagnetFloor/magnet_floor.gd" id="1_kwq4r"]
-[ext_resource type="Texture2D" uid="uid://bhroufyffxwdo" path="res://Scenes/Magnet/MagnetFloor/tile_0062.png" id="2_3xrwp"]
+[ext_resource type="Texture2D" uid="uid://ckhke8frtk2hl" path="res://Scenes/Magnet/MagnetFloor/magnet_tile.png" id="2_kwq4r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vkk2d"]
 radius = 32.0
@@ -10,7 +10,7 @@ radius = 32.0
 script = ExtResource("1_kwq4r")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1231795202]
-texture = ExtResource("2_3xrwp")
+texture = ExtResource("2_kwq4r")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=812730151]
 
