@@ -4,6 +4,7 @@ extends Node2D
 @export var bullet_timer: float = 0.5
 @export var bullet_scene: PackedScene = null
 @export var direction: Vector2 = Vector2.LEFT
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var can_spawn: bool = false
 
@@ -19,6 +20,7 @@ func shoot_bullet() -> void:
 		var bullet = bullet_scene.instantiate()
 		bullet.direction = direction
 		add_child(bullet)
+		audio_stream_player_2d.play()
 		
 
 

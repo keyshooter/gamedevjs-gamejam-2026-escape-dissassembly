@@ -14,11 +14,12 @@ var on_ground = true
 var is_confused: bool = false
 var confusion_timer: float = 0.0
 const MAX_CONFUSION_TIME: float = 3.0
+var camera_intensity: float = 0
 
 @onready var sprite: Sprite2D = $Sprite
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
-
+@onready var camera: Camera2D = $Camera2D
 
 func _physics_process(delta: float) -> void:
 	# Gravity — read gravity_scale meta set by LowGravityZone (defaults to 1.0)
@@ -62,6 +63,10 @@ func _process(delta: float) -> void:
 	if velocity.x != 0:
 		sprite.flip_h = velocity.x < 0
 		
+	if camera_intensity > 0:
+		camera_intensity = lerpf(camera_intensity, 0, delta * 10)
+		camera.offset = _random_camera_offset()
+		
 	if is_confused:
 		confusion_timer += delta
 		sprite.modulate = Color.YELLOW
@@ -101,3 +106,13 @@ func _manage_animation() -> void:
 func confuse_player() -> void:
 	is_confused = true
 	confusion_timer = 0.0
+	
+func _random_camera_offset() -> Vector2:
+	var x = randf_range(-camera_intensity, camera_intensity)
+	var y = randf_range(-camera_intensity, camera_intensity)
+	
+	return Vector2(x, y)
+	
+func do_camera_shake():
+	camera_intensity = 3
+	

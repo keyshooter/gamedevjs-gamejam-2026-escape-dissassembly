@@ -61,4 +61,4 @@ func _on_shake_detection_body_exited(body: Node2D) -> void:
 
 func shake_camera():
 	if player_reference:
-		print("shake camera!")
+		player_reference.camera_intensity = 5

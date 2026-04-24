@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2lmy7bkgjnxa" path="res://Scenes/Magnet/magnet.gd" id="1_fmm81"]
 [ext_resource type="Texture2D" uid="uid://dg34roib68p4a" path="res://Scenes/Magnet/magnet.png" id="2_fmm81"]
+[ext_resource type="AudioStream" uid="uid://ckn7rh3a2wy3m" path="res://Scenes/Magnet/beam.ogg" id="3_ixvoe"]
 
 [node name="Magnet" type="Node2D" unique_id=99533466]
 script = ExtResource("1_fmm81")
@@ -14,6 +15,11 @@ texture = ExtResource("2_fmm81")
 [node name="Timer" type="Timer" parent="." unique_id=556633094]
 
 [node name="ScreenCheck" type="VisibleOnScreenEnabler2D" parent="." unique_id=948238661]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2020348076]
+stream = ExtResource("3_ixvoe")
+volume_db = -0.5
+max_distance = 300.0
 
 [connection signal="screen_entered" from="ScreenCheck" to="." method="_on_screen_check_screen_entered"]
 [connection signal="screen_exited" from="ScreenCheck" to="." method="_on_screen_check_screen_exited"]
