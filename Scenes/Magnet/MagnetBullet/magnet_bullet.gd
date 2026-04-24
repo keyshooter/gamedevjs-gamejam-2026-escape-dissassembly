@@ -3,8 +3,11 @@ extends Area2D
 var direction: Vector2 = Vector2.LEFT
 var speed: float = 150.0
 
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
+
 func _physics_process(delta: float) -> void:
 	position += transform.x * speed * delta * direction
+	anim_player.play("magnet-bullet-loop")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):

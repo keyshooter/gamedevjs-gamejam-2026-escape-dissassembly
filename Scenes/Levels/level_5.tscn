@@ -126,7 +126,7 @@ scale = Vector2(3.6000004, 1)
 [node name="PressurePlates" type="Node2D" parent="." unique_id=299052925]
 
 [node name="PressurePlate" parent="PressurePlates" unique_id=1131907912 instance=ExtResource("6_evokg")]
-position = Vector2(-2, 56)
+position = Vector2(-20, 56)
 
 [node name="PressurePlate6" parent="PressurePlates" unique_id=2143791843 instance=ExtResource("6_evokg")]
 position = Vector2(172, 57)
@@ -138,7 +138,7 @@ position = Vector2(-136, 57)
 position = Vector2(225, -396)
 
 [node name="PressurePlate3" parent="PressurePlates" unique_id=1464003731 instance=ExtResource("6_evokg")]
-position = Vector2(126, -196)
+position = Vector2(108, -196)
 
 [node name="PressurePlate4" parent="PressurePlates" unique_id=209485951 instance=ExtResource("6_evokg")]
 position = Vector2(342, -196)
