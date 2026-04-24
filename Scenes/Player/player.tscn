@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://btc8lifbmroto" path="res://Scenes/Player/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://bh86jcc733igk" path="res://Scenes/Player/Images/tile_020.png" id="1_l8h54"]
-[ext_resource type="Texture2D" uid="uid://ds6kyrjfk7tpl" path="res://Scenes/Player/Images/tile_029.png" id="3_fhl08"]
-[ext_resource type="Texture2D" uid="uid://djfm25v7et66j" path="res://Scenes/Player/Images/tile_028.png" id="3_od3ui"]
-[ext_resource type="Texture2D" uid="uid://c8y0d6jodpu21" path="res://Scenes/Player/Images/tile_027.png" id="4_00tjw"]
-[ext_resource type="Texture2D" uid="uid://bhb6qbvj2if20" path="res://Scenes/Player/Images/tile_022.png" id="4_vtle1"]
-[ext_resource type="Texture2D" uid="uid://dj7mxpdhs4imp" path="res://Scenes/Player/Images/tile_024.png" id="5_gk6dx"]
-[ext_resource type="Texture2D" uid="uid://dnownmnag5jq" path="res://Scenes/Player/Images/tile_021.png" id="5_od3ui"]
-[ext_resource type="Texture2D" uid="uid://bartklbm6ixj2" path="res://Scenes/Player/Images/tile_030.png" id="6_00tjw"]
-[ext_resource type="Texture2D" uid="uid://csgv2x3lqosmy" path="res://Scenes/Player/Images/tile_023.png" id="8_jhyir"]
+[ext_resource type="Texture2D" uid="uid://77on81ukglr" path="res://Scenes/Player/Robo/Robo-fall1.png" id="3_74mp2"]
+[ext_resource type="Texture2D" uid="uid://d2514eckkwuii" path="res://Scenes/Player/Robo/Robo-fall2.png" id="4_oikmp"]
+[ext_resource type="Texture2D" uid="uid://dto3jb1uu8ifp" path="res://Scenes/Player/Robo/Robo-Idle1.png" id="5_jhyir"]
+[ext_resource type="Texture2D" uid="uid://btwcm785pdjpp" path="res://Scenes/Player/Robo/Robo-Idle2.png" id="6_74mp2"]
+[ext_resource type="Texture2D" uid="uid://c72euqnpwsx4e" path="res://Scenes/Player/Robo/Robo-jump.png" id="8_06tpx"]
+[ext_resource type="Texture2D" uid="uid://vw62l8oh3fee" path="res://Scenes/Player/Robo/Robo-land.png" id="9_7g0yx"]
+[ext_resource type="Texture2D" uid="uid://q30poa20qkjx" path="res://Scenes/Player/Robo/Robo-move-right1.png" id="10_dey5f"]
+[ext_resource type="Texture2D" uid="uid://cxf10vyaoh7u7" path="res://Scenes/Player/Robo/Robo-move-right2.png" id="11_r5xpd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(16, 12.5)
@@ -42,7 +42,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("3_od3ui"), ExtResource("4_00tjw")]
+"values": [ExtResource("3_74mp2"), ExtResource("4_oikmp")]
 }
 
 [sub_resource type="Animation" id="Animation_jhyir"]
@@ -58,7 +58,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_gk6dx")]
+"values": [ExtResource("9_7g0yx")]
 }
 
 [sub_resource type="Animation" id="Animation_5htga"]
@@ -71,10 +71,10 @@ tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.23333333),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("1_l8h54"), ExtResource("3_fhl08")]
+"values": [ExtResource("5_jhyir"), ExtResource("6_74mp2")]
 }
 
 [sub_resource type="Animation" id="Animation_p5o4e"]
@@ -90,8 +90,11 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_vtle1")]
+"values": [ExtResource("8_06tpx")]
 }
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jhyir"]
+load_path = "res://.godot/imported/Robo-land.png-71b70e9d8df58eafd3ce79761d499104.ctex"
 
 [sub_resource type="Animation" id="Animation_74mp2"]
 resource_name = "landed"
@@ -106,7 +109,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("8_jhyir")]
+"values": [SubResource("CompressedTexture2D_jhyir")]
 }
 
 [sub_resource type="Animation" id="Animation_gu6f8"]
@@ -123,7 +126,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.13333334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("5_od3ui"), ExtResource("6_00tjw")]
+"values": [ExtResource("10_dey5f"), ExtResource("11_r5xpd")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dkpta"]
