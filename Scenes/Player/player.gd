@@ -23,8 +23,8 @@ const MAX_CONFUSION_TIME: float = 3.0
 func _physics_process(delta: float) -> void:
 	# Gravity — read gravity_scale meta set by LowGravityZone (defaults to 1.0)
 	if not is_on_floor():
-		var scale: float = get_meta("gravity_scale", 1.0)
-		velocity.y += gravity * scale * delta
+		var g_scale: float = get_meta("gravity_scale", 1.0)
+		velocity.y += gravity * g_scale * delta
 
 	# Use move input
 	move_input = Input.get_axis("move_left", "move_right")

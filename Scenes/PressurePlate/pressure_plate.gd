@@ -4,6 +4,8 @@ extends Node2D
 @onready var dead_zone = $DeadZone
 @onready var anim = $AnimationPlayer
 
+var player_reference: CharacterBody2D = null
+
 # timer for when the dead zone should be active
 const TIME_ACTIVATE_DEAD_ZONE: float = 2.76
 
@@ -45,3 +47,18 @@ func _on_dead_zone_body_entered(body: Node2D) -> void:
 # if the player leaves, we no longer need the referece
 func _on_dead_zone_body_exited(_body: Node2D) -> void:
 	entered_body = null
+
+
+func _on_shake_detection_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		player_reference = body
+
+
+func _on_shake_detection_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		player_reference = null
+
+
+func shake_camera():
+	if player_reference:
+		print("shake camera!")
