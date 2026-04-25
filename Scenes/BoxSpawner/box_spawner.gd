@@ -1,6 +1,5 @@
 extends Node2D
 
-
 @export var seconds_to_spawn: float = 5.0
 @export var spawn_location: Marker2D
 @export var element_to_spawn: PackedScene
@@ -8,28 +7,17 @@ extends Node2D
 var seconds_passed: float = 0.0
 var can_spawn: bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	can_spawn = !!spawn_location and !!element_to_spawn
+	can_spawn = spawn_location != null and element_to_spawn != null
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if not can_spawn:
+		return
+
 	seconds_passed += delta
-	
-	if can_spawn and seconds_passed >= seconds_to_spawn:
-		seconds_passed = 0.0
-		var element = element_to_spawn.instantiate()
-		element.position = spawn_location.position
-		add_child(element)
-		
+
 	if seconds_passed >= seconds_to_spawn:
 		seconds_passed = 0.0
-
-
-func _on_screen_check_screen_entered() -> void:
-	can_spawn = !!spawn_location and !!element_to_spawn
-
-
-func _on_screen_check_screen_exited() -> void:
-	can_spawn = false
+		var element = element_to_spawn.instantiate()
+		get_tree().current_scene.add_child(element)
+		element.global_position = spawn_location.global_position

@@ -7,9 +7,11 @@
 friction = 0.1
 bounce = 0.2
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_16aus"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ddhe"]
+height = 24.0
 
 [node name="Box" type="RigidBody2D" unique_id=1501591403 groups=["Box"]]
+mass = 0.6
 physics_material_override = SubResource("PhysicsMaterial_if54f")
 lock_rotation = true
 script = ExtResource("1_7ddhe")
@@ -18,8 +20,4 @@ script = ExtResource("1_7ddhe")
 texture = ExtResource("2_7ddhe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=597163701]
-shape = SubResource("RectangleShape2D_16aus")
-
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=147160060]
-
-[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
+shape = SubResource("CapsuleShape2D_7ddhe")

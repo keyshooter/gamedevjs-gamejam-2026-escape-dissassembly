@@ -10,6 +10,4 @@ script = ExtResource("1_fagrj")
 texture = ExtResource("2_dw6oe")
 
 [node name="ScreenCheck" type="VisibleOnScreenEnabler2D" parent="." unique_id=1573062529]
-
-[connection signal="screen_entered" from="ScreenCheck" to="." method="_on_screen_check_screen_entered"]
-[connection signal="screen_exited" from="ScreenCheck" to="." method="_on_screen_check_screen_exited"]
+rect = Rect2(-905, -174, 1810, 951)
