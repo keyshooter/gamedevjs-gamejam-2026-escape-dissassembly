@@ -197,8 +197,10 @@ libraries/ = SubResource("AnimationLibrary_7kv1w")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=669174335]
 volume_db = -0.5
 max_distance = 300.0
+playback_type = 1
 
 [node name="ShakeDetection" type="Area2D" parent="." unique_id=917241054]
+position = Vector2(0, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ShakeDetection" unique_id=1861156250]
 shape = SubResource("RectangleShape2D_e0yno")
