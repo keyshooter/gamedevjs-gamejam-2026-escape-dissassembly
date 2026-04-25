@@ -47,11 +47,11 @@ tile_map_data = PackedByteArray("AAD9/wIAAgANAAYAAAD+/wIAAgANAAYAAAADAAIAAgAAAAI
 tile_set = ExtResource("1_167vu")
 
 [node name="Player" parent="." unique_id=1071533100 instance=ExtResource("2_x1k1j")]
-position = Vector2(-154, 96)
+position = Vector2(-204, 96)
 
 [node name="DeadZone" parent="." unique_id=137864004 instance=ExtResource("3_4ahh4")]
-position = Vector2(2195, 197)
-scale = Vector2(133.21246, 0.72000027)
+position = Vector2(2231, 196)
+scale = Vector2(118.6445, 0.72000027)
 
 [node name="Scene-Transition" type="Area2D" parent="." unique_id=1844852944 groups=["Player"]]
 position = Vector2(3717.0002, -227)
@@ -64,7 +64,7 @@ trigger_group = "Player"
 shape = SubResource("RectangleShape2D_1hf40")
 
 [node name="BoxSpawner" parent="." unique_id=603810891 node_paths=PackedStringArray("spawn_location") instance=ExtResource("8_4ahh4")]
-position = Vector2(1809, -298)
+position = Vector2(1808, -322)
 seconds_to_spawn = 2.0
 spawn_location = NodePath("Marker2D")
 element_to_spawn = ExtResource("9_dl55b")
