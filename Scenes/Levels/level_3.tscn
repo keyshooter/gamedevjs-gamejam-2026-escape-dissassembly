@@ -158,4 +158,5 @@ scale = Vector2(11.995345, 48.97068)
 texture = SubResource("GradientTexture2D_sy7oa")
 
 [node name="PressurePlate" parent="." unique_id=1131907912 instance=ExtResource("10_osqx1")]
+visible = false
 position = Vector2(3497, -303)
