@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://xhwukfautdp"]
+
+[ext_resource type="Texture2D" uid="uid://das7cvn8m8522" path="res://Scenes/Levels/win_bg.png" id="1_fm2ux"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7v1av"]
+font_size = 68
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[node name="LevelWon" type="Node2D" unique_id=223553834]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=132891104]
+position = Vector2(577.0625, 285.12503)
+scale = Vector2(0.20546205, 0.19237447)
+texture = ExtResource("1_fm2ux")
+
+[node name="Label" type="Label" parent="." unique_id=1391353204]
+offset_left = 55.0
+offset_top = 509.0
+offset_right = 677.0
+offset_bottom = 602.0
+text = "Thanks for Playing!"
+label_settings = SubResource("LabelSettings_7v1av")
