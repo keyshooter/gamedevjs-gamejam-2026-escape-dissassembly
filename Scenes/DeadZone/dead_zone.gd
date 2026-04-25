@@ -2,7 +2,9 @@
 extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
-	if not body.is_in_group("Player"):
+	if body.is_in_group("Player"):
+		body.game_over()
 		return
-		
-	body.game_over()
+	
+	if body.is_in_group("Box"):
+		body.queue_free()
